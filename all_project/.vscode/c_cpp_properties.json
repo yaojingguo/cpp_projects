@@ -3,13 +3,12 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**",
-                "bazel-cpp_project/external"
+                "${workspaceFolder}/**"
             ],
             "defines": [],
             "macFrameworkPath": [],
             "compilerPath": "/usr/bin/clang",
-            "cppStandard": "c++17",
+            "cppStandard": "gnu++14",
             "intelliSenseMode": "macos-clang-x64"
         }
     ],
