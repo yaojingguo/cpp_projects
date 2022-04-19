@@ -18,7 +18,11 @@ class QueueTest : public ::testing::Test {
   Queue<int> q2_;
 };
 
-TEST_F(QueueTest, IsEmptyInitially) { EXPECT_EQ(q0_.size(), 1); }
+TEST_F(QueueTest, IsEmptyInitially) { 
+  std::cout << "hello, world" << std::endl;
+  std::cout << "China" << std::endl;
+  EXPECT_EQ(q0_.size(), 1); 
+}
 
 TEST_F(QueueTest, DequeueWorks) {
   int n = q0_.Dequeue();
