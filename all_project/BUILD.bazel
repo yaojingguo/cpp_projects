@@ -1,0 +1,25 @@
+cc_test(
+  name = "file_test",
+  srcs = ["file_test.cc"],
+  deps = [
+    "@gtest//:gtest",
+    "@gtest//:gtest_main",
+  ],
+)
+
+cc_test(
+  name = "queue_test",
+  srcs = ["queue_test.cc", "queue.h"],
+  deps = [
+    "@gtest//:gtest",
+    "@gtest//:gtest_main",
+  ],
+)
+
+cc_test(
+  name = "with_main_test",
+  srcs = ["with_main_test.cc"],
+  deps = [
+    "@gtest//:gtest"
+  ],
+)
