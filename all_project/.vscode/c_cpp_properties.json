@@ -3,7 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/private/var/tmp/_bazel_jing/8798ef41562e4eaf89c858cbcf1dcc07/external/com_google_googletest/googletest/include"
             ],
             "defines": [],
             "macFrameworkPath": [],

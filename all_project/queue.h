@@ -34,6 +34,6 @@ E Queue<E>::Dequeue() {
 }
 
 template <typename E>
-size_t Queue<E>::size() const { 
-  return list_.size(); 
+size_t Queue<E>::size() const {
+  return list_.size();
 }
