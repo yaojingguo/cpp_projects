@@ -1,13 +1,13 @@
 load("@hedron_compile_commands//:refresh_compile_commands.bzl", "refresh_compile_commands")
 
 cc_binary(
-  name = "hello_world",
+  name = "absl_usage",
   deps = [
     "@com_google_absl//absl/strings:strings",
-    # "@com_google_absl//absl/strings:str_format",
-    # "@com_google_absl//absl/container:flat_hash_map",
+    "@com_google_absl//absl/strings:str_format",
+    "@com_google_absl//absl/container:flat_hash_map",
   ],
-  srcs = ["hello_world.cc"],
+  srcs = ["absl_usage.cc"],
 )
 
 refresh_compile_commands(
@@ -17,7 +17,7 @@ refresh_compile_commands(
     # For example, specify a dict of targets and any flags required to build.
     targets = {
       # "//:my_output_1": "--important_flag1 --important_flag2=true", 
-      "//:hello_world": "",
+      "//:absl_usage": "",
     },
     # No need to add flags already in .bazelrc. They're automatically picked up.
     # If you don't need flags, a list of targets is also okay, as is a single target string.
