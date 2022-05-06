@@ -5,6 +5,7 @@
 #include "absl/container/flat_hash_map.h"
 #include "absl/strings/str_format.h"
 #include "absl/strings/str_join.h"
+#include "absl/strings/string_view.h"
 
 void Join() {
   std::vector<std::string> v = {"foo", "bar", "baz", "z"};
@@ -24,9 +25,18 @@ void Container() {
   std::cout << map.contains(100) << std::endl;
 }
 
+void func(absl::string_view name) {
+  std::cout << "My name is " << name << std::endl;
+}
+void StringView() {
+  std::string name = "xiao yu";
+  func(name);
+}
+
 int main() {
   Join();
   Format();
   Container();
+  StringView();
   return 0;
 }
