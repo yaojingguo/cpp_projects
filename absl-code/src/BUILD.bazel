@@ -18,13 +18,13 @@ cc_binary(
   srcs = ["glog_usage.cc"]
 )
 
-filegroup(
-  name = "all",
-  srcs = [
-    ":absl_usage", 
-    ":glog_usage",
-  ]
-)
+# filegroup(
+#   name = "all",
+#   srcs = [
+#     ":absl_usage", 
+#     ":glog_usage",
+#   ]
+# )
 
 refresh_compile_commands(
     name = "refresh_compile_commands",
