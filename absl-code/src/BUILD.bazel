@@ -20,7 +20,7 @@ cc_binary(
 
 cc_test(
   name = "absl_test",
-  srcs = ["absl_test.cc"],
+  srcs = ["absl_test.cc", "lang_test.cc"],
   deps = [
     "@googletest//:gtest_main",
   ]
