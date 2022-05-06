@@ -3,17 +3,16 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**",
-                "/private/var/tmp/_bazel_jing/f9428d6efcdbc6bcb4da8385bfc5ef19/external/com_google_absl"
+                "${workspaceFolder}/**"
+                // "/private/var/tmp/_bazel_jing/f9428d6efcdbc6bcb4da8385bfc5ef19/external/com_google_absl"
             ],
             "defines": [],
-            //  "compileCommands": "${workspaceFolder}/compile_commands.json",
+            "compileCommands": "${workspaceFolder}/compile_commands.json",
             "macFrameworkPath": [],
             "compilerPath": "/usr/local/bin/gcc-11",
             "cStandard": "gnu11",
             "cppStandard": "gnu++14",
-            "intelliSenseMode": "macos-gcc-x64",
-            "compileCommands": "${workspaceFolder}/compile_commands.json"
+            "intelliSenseMode": "macos-gcc-x64"
         }
     ],
     "version": 4
