@@ -26,7 +26,7 @@ void Container() {
 
 int main() {
   Join();
-  // Format();
-  // Container();
+  Format();
+  Container();
   return 0;
 }
