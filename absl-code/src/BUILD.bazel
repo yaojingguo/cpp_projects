@@ -18,6 +18,14 @@ cc_binary(
   srcs = ["glog_usage.cc"]
 )
 
+cc_test(
+  name = "absl_test",
+  srcs = ["absl_test.cc"],
+  deps = [
+    "@googletest//:gtest_main",
+  ]
+)
+
 # filegroup(
 #   name = "all_targets",
 #   srcs = [
