@@ -19,7 +19,7 @@ cc_binary(
 )
 
 # filegroup(
-#   name = "all",
+#   name = "all_targets",
 #   srcs = [
 #     ":absl_usage", 
 #     ":glog_usage",
@@ -33,7 +33,7 @@ refresh_compile_commands(
     # For example, specify a dict of targets and any flags required to build.
     targets = {
       # "//:my_output_1": "--important_flag1 --important_flag2=true", 
-      "//:absl_usage": "",
+      "//src:all": "",
     },
     # No need to add flags already in .bazelrc. They're automatically picked up.
     # If you don't need flags, a list of targets is also okay, as is a single target string.
