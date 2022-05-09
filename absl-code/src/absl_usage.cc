@@ -75,13 +75,16 @@ void Vector() {
   vec.push_back(p2);
 }
 
-void Span() {
-  int a[] = {10, 20, 30};
-  absl::Span<int> mySpan(a);
-  for (auto v: mySpan) {
+void TakeSpan(absl::Span<const int> span) {
+  for (auto v: span) {
     std::cout << v << std::endl;
   }
   std::cout << std::endl; 
+} 
+
+void Span() {
+  int a[] = {10, 20, 30};
+  TakeSpan(a);
 }
 
 int main() {
@@ -89,7 +92,7 @@ int main() {
   // Format();
   // Container();
   // StringView();
-  InlinedVector();
+  // InlinedVector();
   Span();
   return 0;
 }
