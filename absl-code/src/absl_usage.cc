@@ -6,6 +6,8 @@
 #include "absl/strings/str_format.h"
 #include "absl/strings/str_join.h"
 #include "absl/strings/string_view.h"
+#include "absl/container/inlined_vector.h"
+#include "absl/types/span.h"
 
 void Join() {
   std::vector<std::string> v = {"foo", "bar", "baz", "z"};
@@ -28,15 +30,66 @@ void Container() {
 void func(absl::string_view name) {
   std::cout << "My name is " << name << std::endl;
 }
+
 void StringView() {
   std::string name = "xiao yu";
   func(name);
 }
 
+void InlinedVector() {
+  constexpr int N = 5;
+  absl::InlinedVector<int, N> vec;
+  
+  for (int i = 1; i <= N; i++) {
+    vec.push_back(i * 10);
+  }
+
+  for (int i = 1; i <= N; i++) {
+    std::cout << vec[i-1] << std::endl;
+  }
+}
+
+class Person {
+public:
+    Person(int no, int age) : no_(no), age_(age) {}
+    Person(const Person& other) {
+        no_ = other.no_;
+        age_ = other.age_;
+    }
+    void info() {
+        std::cout << "no: " << no_ << "age: " << age_ << std::endl;
+    }
+
+private:
+    int no_;
+    int age_;
+
+};
+
+
+void Vector() {
+  std::vector<Person> vec;
+  Person p1(1, 10);
+  Person p2(1, 20);
+  vec.push_back(p1);
+  vec.push_back(p2);
+}
+
+void Span() {
+  int a[] = {10, 20, 30};
+  absl::Span<int> mySpan(a);
+  for (auto v: mySpan) {
+    std::cout << v << std::endl;
+  }
+  std::cout << std::endl; 
+}
+
 int main() {
-  Join();
-  Format();
-  Container();
-  StringView();
+  // Join();
+  // Format();
+  // Container();
+  // StringView();
+  InlinedVector();
+  Span();
   return 0;
 }
