@@ -3,8 +3,8 @@
         {
             "name": "Mac",
             "includePath": [
-                "${workspaceFolder}/**"
-                // "/private/var/tmp/_bazel_jing/f9428d6efcdbc6bcb4da8385bfc5ef19/external/com_google_absl"
+                "${workspaceFolder}/**",
+                "/private/var/tmp/_bazel_jing/f9428d6efcdbc6bcb4da8385bfc5ef19/external/com_google_absl"
             ],
             "defines": [],
             "compileCommands": "${workspaceFolder}/compile_commands.json",

@@ -6,6 +6,7 @@
 #include "absl/strings/str_format.h"
 #include "absl/strings/str_join.h"
 #include "absl/strings/string_view.h"
+#include "absl/strings/escaping.h"
 #include "absl/container/inlined_vector.h"
 #include "absl/types/span.h"
 
@@ -63,9 +64,7 @@ public:
 private:
     int no_;
     int age_;
-
 };
-
 
 void Vector() {
   std::vector<Person> vec;
@@ -87,12 +86,22 @@ void Span() {
   TakeSpan(a);
 }
 
+void Base64() {
+  std::string data = "ab\x11";
+  std::string s = absl::BytesToHexString(data);
+  std::cout << "hex: " << s << std::endl;
+
+  std::string base64 = absl::Base64Escape(data);
+  std::cout << "base64: " << base64 << std::endl;
+}
+
 int main() {
   // Join();
   // Format();
   // Container();
   // StringView();
   // InlinedVector();
-  Span();
+  // Span();
+  Base64();
   return 0;
 }
